@@ -4,8 +4,8 @@
 The back-end is constructed by nodejs, graphql and mongodb (as database)  
 
 ## Installation
-run "npm install" in terminal to install dependancies in package.json  
-After installing, run "node back_main.js" to start the back_end
+* run "npm install" in terminal to install dependancies in package.json  
+* run "node back_main.js" to start the back_end
 
 ## Description of file  
 * back_main.js: it's the main nodejs to set up the express and graphql  
