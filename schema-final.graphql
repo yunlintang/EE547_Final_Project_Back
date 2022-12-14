@@ -1,0 +1,55 @@
+type Query {
+  user(
+    username: String!
+    password: String!
+  ): User
+
+  restaurantList(
+    number: Int
+  ): [Restaurant!]!
+}
+
+type Mutation {
+  reservationCreate(
+    username: String
+    restaurant: String
+    date: String
+  ): String
+
+  reservationDelete(
+    username: String
+    restaurant: String
+    date: String
+  ): String
+
+  userCreate(
+    username: String
+    password: String
+  ): User
+
+  voteUpdate(
+    restaurant: String!
+    user: String!
+  ): String
+}
+
+type User {
+  username:              String!
+  is_voted:              Boolean!
+  total_reservations:    Int!
+  reservations:          [Reservation]!
+  message:               String!
+}
+
+
+type Reservation {
+  username:            String!
+  date:                String!
+  restaurant:          String!
+}
+
+type Restaurant {
+  name:                String!
+  vote_number:         Int!
+  image_url:           String!
+}
